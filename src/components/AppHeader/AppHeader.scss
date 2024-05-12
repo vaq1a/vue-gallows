@@ -1,0 +1,18 @@
+.title {
+  font-size: 32px;
+  line-height: 1.5;
+  text-align: center;
+
+  &--indent {
+    margin-bottom: 20px;
+  }
+}
+
+.condition {
+  font-size: 20px;
+  line-height: 1.5;
+
+  &--indent {
+    margin-bottom: 10px;
+  }
+}

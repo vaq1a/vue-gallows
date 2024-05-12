@@ -1,0 +1,9 @@
+.game-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: $color-dark-100;
+  border: 1px solid $color-dark-100;
+  padding: 10px;
+}
+
