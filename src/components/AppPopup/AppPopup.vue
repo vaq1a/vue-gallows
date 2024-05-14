@@ -2,8 +2,10 @@
   <div v-show="isVisible" class="popup-container">
     <div class="popup">
       <h2 v-if="!isLose" class="popup__title">Congratulations, you won!</h2>
-      <h2 v-if="isLose" class="popup__title">You lose.</h2>
-      <p v-if="isLose" class="popup__answer">name: Max</p>
+      <template v-else>
+        <h2 class="popup__title">You lose.</h2>
+        <p class="popup__answer">name: Max</p>
+      </template>
       <button
           @click="closePopup"
           class="popup__button"
