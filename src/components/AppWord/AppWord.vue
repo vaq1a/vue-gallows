@@ -1,16 +1,29 @@
 <template>
   <div class="word">
     <p class="word__title">Result: </p>
-    <span class="word__letter">l</span>
-    <span class="word__letter"></span>
-    <span class="word__letter">d</span>
-    <span class="word__letter"></span>
-    <span class="word__letter"></span>
+    <span
+        v-for="(item, index) in word"
+        :key="item"
+        class="word__letter"
+    >
+      {{ checkRightLetter(item) }}
+    </span>
   </div>
 </template>
 
 <script setup lang="ts">
+import {toRefs, unref} from "vue";
 
+const props = defineProps({
+  letters: Array<string>,
+  word: String
+})
+
+const { letters, word } = toRefs(props)
+
+const checkRightLetter = (item: string) => {
+  return unref(letters).includes(item.toLowerCase()) ? item : ''
+}
 </script>
 
 <style lang="scss" scoped>
