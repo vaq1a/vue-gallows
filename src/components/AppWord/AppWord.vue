@@ -3,7 +3,7 @@
     <p class="word__title">Result: </p>
     <span
         v-for="(item, index) in word"
-        :key="item"
+        :key="index"
         class="word__letter"
     >
       {{ checkRightLetter(item) }}
